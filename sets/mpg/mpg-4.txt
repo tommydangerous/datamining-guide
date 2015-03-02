@@ -1,0 +1,35 @@
+40,	4,	89.00,	60.00,	1968,	18.8,	toyota corolla tercel
+10,	8,	350.0,	160.0,	4456,	13.5,	oldsmobile delta 88 royale
+25,	4,	140.0,	78.00,	2592,	18.5,	pontiac astro
+25,	4,	151.0,	90.00,	2735,	18.0,	pontiac phoenix
+25,	4,	140.0,	75.00,	2542,	17.0,	chevrolet vega
+25,	4,	141.0,	71.00,	3190,	24.8,	peugeot 504
+25,	4,	116.0,	75.00,	2246,	14.0,	fiat 124 tc
+25,	6,	173.0,	115.0,	2700,	12.9,	oldsmobile omega brougham
+35,	4,	85.00,	70.00,	1945,	16.8,	datsun f-10 hatchback
+35,	4,	98.00,	65.00,	2045,	16.2,	ford escort 4w
+35,	4,	91.00,	53.00,	1795,	17.4,	honda civic
+35,	4,	105.0,	74.00,	1980,	15.3,	volkswagen rabbit l
+15,	8,	454.0,	220.0,	4354,	9.0,	chevrolet impala
+15,	8,	400.0,	190.0,	4422,	12.5,	chrysler newport royal
+15,	8,	318.0,	150.0,	4135,	13.5,	plymouth fury iii
+15,	8,	351.0,	152.0,	4215,	12.8,	ford gran torino
+15,	6,	250.0,	100.0,	3781,	17.0,	chevrolet chevelle malibu classic
+15,	8,	360.0,	175.0,	3821,	11.0,	amc ambassador brougham
+15,	8,	429.0,	198.0,	4341,	10.0,	ford galaxie 500
+30,	4,	91.00,	68.00,	1970,	17.6,	mazda glc custom
+30,	4,	156.0,	105.0,	2800,	14.4,	dodge colt
+30,	4,	71.00,	65.00,	1836,	21.0,	toyota corolla 1200
+30,	4,	90.00,	75.00,	2125,	14.5,	dodge colt
+30,	4,	97.00,	67.00,	2065,	17.8,	subaru
+30,	4,	108.0,	75.00,	2350,	16.8,	toyota corolla
+45,	4,	90.00,	48.00,	2085,	21.7,	vw rabbit c (diesel)
+20,	6,	200.0,	85.00,	2965,	15.8,	ford fairmont (auto)
+20,	8,	305.0,	145.0,	3425,	13.2,	chevrolet monte carlo landau
+20,	4,	121.0,	115.0,	2795,	15.7,	saab 99gle
+20,	6,	225.0,	95.00,	3785,	19.0,	plymouth fury
+20,	6,	225.0,	85.00,	3465,	16.6,	chrysler lebaron salon
+20,	6,	225.0,	100.0,	3430,	17.2,	plymouth volare
+20,	6,	232.0,	90.00,	3265,	18.2,	amc concord dl 6
+20,	6,	250.0,	88.00,	3021,	16.5,	ford maverick
+20,	6,	250.0,	98.00,	3525,	19.0,	ford granada

@@ -1,0 +1,33 @@
+40,	4,	85.00,	65.00,	2110,	19.2,	datsun 210
+10,	8,	429.0,	198.0,	4952,	11.5,	mercury marquis brougham
+25,	4,	116.0,	75.00,	2158,	15.5,	opel manta
+25,	4,	97.00,	46.00,	1950,	21.0,	volkswagen super beetle
+25,	4,	121.0,	115.0,	2671,	13.5,	saab 99le
+25,	4,	120.0,	97.00,	2489,	15.0,	honda civic
+25,	4,	120.0,	88.00,	2957,	17.0,	peugeot 504
+25,	4,	119.0,	97.00,	2545,	17.0,	datsun 710
+35,	4,	151.0,	90.00,	2556,	13.2,	pontiac phoenix
+35,	4,	91.00,	69.00,	2130,	14.7,	fiat strada custom
+35,	4,	98.00,	80.00,	1915,	14.4,	dodge colt hatchback custom
+35,	4,	86.00,	65.00,	1975,	15.2,	maxda glc deluxe
+15,	6,	250.0,	105.0,	3897,	18.5,	chevroelt chevelle malibu
+15,	8,	350.0,	165.0,	3693,	11.5,	buick skylark 320
+15,	8,	440.0,	215.0,	4312,	8.5,	plymouth fury iii
+15,	8,	318.0,	150.0,	4237,	14.5,	plymouth fury gran sedan
+15,	8,	302.0,	130.0,	4295,	14.9,	mercury cougar brougham
+15,	8,	318.0,	150.0,	3755,	14.0,	dodge d100
+15,	8,	351.0,	142.0,	4054,	14.3,	ford country squire (sw)
+30,	4,	112.0,	88.00,	2605,	19.6,	chevrolet cavalier
+30,	4,	97.00,	78.00,	1940,	14.5,	volkswagen rabbit custom
+30,	4,	119.0,	82.00,	2720,	19.4,	chevy s-10
+30,	4,	97.00,	75.00,	2171,	16.0,	toyota corolla
+30,	4,	135.0,	84.00,	2525,	16.0,	dodge aries se
+30,	4,	141.0,	80.00,	3230,	20.4,	peugeot 505s turbo diesel
+20,	5,	131.0,	103.0,	2830,	15.9,	audi 5000
+20,	4,	140.0,	88.00,	2890,	17.3,	ford fairmont 4
+20,	6,	156.0,	122.0,	2807,	13.5,	toyota mark ii
+20,	6,	225.0,	110.0,	3360,	16.6,	dodge aspen 6
+20,	4,	120.0,	88.00,	3270,	21.9,	peugeot 504
+20,	6,	225.0,	100.0,	3651,	17.7,	dodge aspen se
+20,	4,	122.0,	86.00,	2226,	16.5,	ford pinto runabout
+20,	3,	70.00,	97.00,	2330,	13.5,	mazda rx2 coupe

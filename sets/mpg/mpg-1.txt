@@ -1,0 +1,37 @@
+40,	4,	91.00,	67.00,	1965,	15.0,	honda civic
+10,	8,	455.0,	225.0,	4951,	11.0,	buick electra 225 custom
+25,	4,	108.0,	93.00,	2391,	15.5,	subaru
+25,	4,	97.00,	78.00,	2300,	14.5,	opel manta
+25,	4,	151.0,	90.00,	2950,	17.3,	chevrolet camaro
+25,	4,	97.00,	75.00,	2265,	18.2,	toyota corolla liftback
+25,	4,	119.0,	97.00,	2405,	14.9,	datsun 200-sx
+25,	4,	96.00,	69.00,	2189,	18.0,	renault 12 (sw)
+25,	6,	198.0,	95.00,	2904,	16.0,	plymouth duster
+35,	4,	105.0,	63.00,	2215,	14.9,	plymouth horizon 4
+35,	4,	91.00,	68.00,	2025,	18.2,	mazda glc custom l
+35,	4,	107.0,	75.00,	2205,	14.5,	honda accord
+35,	4,	122.0,	88.00,	2500,	15.1,	triumph tr7 coupe
+15,	8,	350.0,	145.0,	4055,	12.0,	chevy c10
+15,	8,	318.0,	150.0,	3940,	13.2,	plymouth volare premier v8
+15,	6,	250.0,	72.00,	3432,	21.0,	mercury monarch
+15,	6,	163.0,	125.0,	3140,	13.6,	volvo 264gl
+15,	8,	350.0,	145.0,	4082,	13.0,	chevrolet monte carlo s
+15,	8,	260.0,	110.0,	4060,	19.0,	oldsmobile cutlass supreme
+15,	6,	250.0,	100.0,	3336,	17.0,	chevrolet nova
+15,	8,	400.0,	150.0,	4464,	12.0,	chevrolet caprice classic
+30,	4,	144.0,	96.00,	2665,	13.9,	toyota celica gt
+30,	4,	146.0,	67.00,	3250,	21.8,	mercedes-benz 240d
+30,	4,	98.00,	65.00,	2380,	20.7,	ford escort 2h
+30,	4,	79.00,	67.00,	1950,	19.0,	datsun b210
+30,	4,	105.0,	75.00,	2230,	14.5,	dodge omni
+30,	4,	120.0,	75.00,	2542,	17.5,	mazda 626
+45,	4,	90.00,	48.00,	1985,	21.5,	volkswagen rabbit custom diesel
+20,	6,	198.0,	95.00,	3102,	16.5,	plymouth duster
+20,	6,	231.0,	110.0,	3415,	15.8,	buick century
+20,	6,	258.0,	95.00,	3193,	17.8,	amc pacer d/l
+20,	6,	250.0,	110.0,	3645,	16.2,	pontiac ventura sj
+20,	8,	302.0,	139.0,	3570,	12.8,	mercury monarch ghia
+20,	6,	200.0,	95.00,	3155,	18.2,	chevrolet malibu
+20,	4,	121.0,	98.00,	2945,	14.5,	volvo 244dl
+20,	6,	232.0,	90.00,	3210,	17.2,	amc concord
+20,	8,	267.0,	125.0,	3605,	15.0,	chevrolet malibu classic (sw)
