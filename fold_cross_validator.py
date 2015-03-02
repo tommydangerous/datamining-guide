@@ -3,13 +3,15 @@ import random
 from classifier import Classifier
 
 class FoldCrossValidator(Classifier):
-    def __init__(self, name, number_of_buckets=10):
+    def __init__(self, name, column_format, number_of_buckets=10):
         """Initializer"""
         super(FoldCrossValidator, self).__init__()
         self.confusion_matrix  = {}
+        self.column_format     = column_format
         self.name              = name
         self.number_of_buckets = number_of_buckets
-        self.test_data         = []
+
+        self.__reset_data()
 
     # Private methods
 
@@ -24,7 +26,7 @@ class FoldCrossValidator(Classifier):
             fields         = self.__split_line(line)
 
             for i in range(len(fields)):
-                column_format = self.format[i]
+                column_format = self.column_format[i]
                 field_value   = fields[i]
                 if column_format =='class':
                     classification = field_value
@@ -39,6 +41,33 @@ class FoldCrossValidator(Classifier):
                     self.data.append(tup)
                 else:
                     self.test_data.append(tup)
+
+    def __load_training_buckets(self, exclude_bucket_number):
+        """Load buckets for training data, excluding a particular bucket."""
+        numbers = range(self.number_of_buckets)
+        slice1  = slice(0, exclude_bucket_number)
+        slice2  = slice(exclude_bucket_number + 1, self.number_of_buckets)
+        bucket_numbers = numbers[slice1] + numbers[slice2]
+
+        lines = []
+        for i in bucket_numbers:
+            f = open(self.__bucket_filename(i))
+            lines += f.readlines()
+            f.close()
+
+        self.__load_data_from_lines(lines, True)
+
+    def __load_test_buckets(self, bucket_number):
+        """Load bucket for test data."""
+        f = open(self.__bucket_filename(bucket_number))
+        lines = f.readlines()
+        f.close()
+
+        self.__load_data_from_lines(lines, False)
+
+    def __reset_data(self):
+        self.data      = []
+        self.test_data = []
 
     def __split_line(self, line):
         return [w.strip().replace('\n', '') for w in line.split(',')]
@@ -79,28 +108,8 @@ class FoldCrossValidator(Classifier):
                 f.write(item)
             f.close()
 
-    def load_training_buckets(self):
-        """Load self.number_of_buckets - 1 files for training."""
-        lines = []
-        for i in range(self.number_of_buckets - 1):
-            f = open(self.__bucket_filename(i))
-            lines += f.readlines()
-            f.close()
-
-        self.format = self.__split_line(lines[0])
-
-        self.__load_data_from_lines(lines[1:], True)
-
-    def load_test_buckets(self):
-        """Load last data bucket for testing."""
-        f = open(self.__bucket_filename(self.number_of_buckets - 1))
-        lines = f.readlines()
-        f.close()
-
-        self.__load_data_from_lines(lines, False)
-
     def print_confusion_matrix(self):
-        top_line = '__ | {}'.format(
+        top_line = '   | {}'.format(
             ' | '.join(sorted(self.confusion_matrix.keys()))
         )
         print(top_line)
@@ -129,26 +138,34 @@ class FoldCrossValidator(Classifier):
             print('{} |{}'.format(key, line_string))
 
     def test_training_bucket(self, standardize='standardize'):
-        all_categories = set([v[0] for v in self.data + self.test_data])
-
-        for cat in all_categories:
-            self.confusion_matrix.setdefault(
-                cat, dict.fromkeys(all_categories, 0)
-            )
-
         correct = 0
-        for value in self.test_data:
-            category   = value[0]
-            vector     = value[1]
-            classified = self.classify(vector, standardize)
 
-            if category == classified:
-                correct += 1
+        all_categories = []
+        for i in range(self.number_of_buckets):
+            print('Testing bucket {}'.format(i))
 
-            self.confusion_matrix[category][classified] += 1
+            self.__reset_data()
+            self.__load_training_buckets(i)
+            self.__load_test_buckets(i)
 
+            if len(all_categories) == 0:
+                all_categories = set([v[0] for v in self.data + self.test_data])
+                for cat in all_categories:
+                    self.confusion_matrix.setdefault(
+                        cat, dict.fromkeys(all_categories, 0)
+                    )
 
-        accuracy   = float(correct) / len(self.test_data)
+            for value in self.test_data:
+                category   = value[0]
+                vector     = value[1]
+                classified = self.classify(vector, standardize)
+
+                self.confusion_matrix[category][classified] += 1
+
+                if category == classified:
+                    correct += 1
+
+        accuracy   = float(correct) / (len(self.data) + len(self.test_data))
         percentage = accuracy * 100
 
         print('-' * 100)
@@ -156,11 +173,9 @@ class FoldCrossValidator(Classifier):
             standardize.capitalize(), percentage, '%')
         )
 
-
-c = FoldCrossValidator('mpg')
+c = FoldCrossValidator(
+    'mpg', ['class', 'num', 'num', 'num', 'num', 'num', 'comment']
+)
 c.create_buckets()
-c.load_training_buckets()
-c.load_test_buckets()
-c.test_training_bucket('standardize')
-
+c.test_training_bucket('normalize')
 c.print_confusion_matrix()
