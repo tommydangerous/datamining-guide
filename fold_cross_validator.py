@@ -6,6 +6,7 @@ class FoldCrossValidator(Classifier):
     def __init__(self, name, number_of_buckets=10):
         """Initializer"""
         super(FoldCrossValidator, self).__init__()
+        self.confusion_matrix  = {}
         self.name              = name
         self.number_of_buckets = number_of_buckets
         self.test_data         = []
@@ -98,11 +99,54 @@ class FoldCrossValidator(Classifier):
 
         self.__load_data_from_lines(lines, False)
 
+    def print_confusion_matrix(self):
+        top_line = '__ | {}'.format(
+            ' | '.join(sorted(self.confusion_matrix.keys()))
+        )
+        print(top_line)
+
+        for key in sorted(self.confusion_matrix.keys()):
+            values = self.confusion_matrix[key]
+            array  = []
+
+            for k in sorted(values.keys()):
+                array.append(values[k])
+
+            line_string = ''
+
+            for number in array:
+                string = str(number)
+                diff = 4 - len(string)
+
+                string = ' {}'.format(string)
+                for i in range(diff - 1):
+                    string += ' '
+
+                string += '|'
+
+                line_string += string
+
+            print('{} |{}'.format(key, line_string))
+
     def test_training_bucket(self, standardize='standardize'):
+        all_categories = set([v[0] for v in self.data + self.test_data])
+
+        for cat in all_categories:
+            self.confusion_matrix.setdefault(
+                cat, dict.fromkeys(all_categories, 0)
+            )
+
         correct = 0
         for value in self.test_data:
-            if value[0] == self.classify(value[1], standardize):
+            category   = value[0]
+            vector     = value[1]
+            classified = self.classify(vector, standardize)
+
+            if category == classified:
                 correct += 1
+
+            self.confusion_matrix[category][classified] += 1
+
 
         accuracy   = float(correct) / len(self.test_data)
         percentage = accuracy * 100
@@ -118,3 +162,5 @@ c.create_buckets()
 c.load_training_buckets()
 c.load_test_buckets()
 c.test_training_bucket('standardize')
+
+c.print_confusion_matrix()
