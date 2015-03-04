@@ -1,0 +1,36 @@
+40,	4,	98.00,	76.00,	2144,	14.7,	vw rabbit
+10,	8,	429.0,	198.0,	4952,	11.5,	mercury marquis brougham
+25,	4,	151.0,	90.00,	2735,	18.0,	pontiac phoenix
+25,	4,	101.0,	83.00,	2202,	15.3,	renault 12tl
+25,	4,	120.0,	97.00,	2489,	15.0,	honda civic
+25,	4,	140.0,	78.00,	2592,	18.5,	pontiac astro
+25,	4,	79.00,	67.00,	1963,	15.5,	volkswagen dasher
+25,	6,	232.0,	90.00,	3085,	17.6,	amc hornet
+25,	4,	121.0,	80.00,	2670,	15.0,	amc spirit dl
+35,	4,	86.00,	65.00,	2019,	16.4,	datsun 310
+35,	4,	79.00,	58.00,	1825,	18.6,	renault 5 gtl
+35,	4,	91.00,	68.00,	1985,	16.0,	mazda glc 4
+35,	4,	98.00,	83.00,	2075,	15.9,	dodge colt m/m
+15,	6,	250.0,	105.0,	3897,	18.5,	chevroelt chevelle malibu
+15,	8,	400.0,	180.0,	4220,	11.1,	pontiac grand prix lj
+15,	8,	302.0,	130.0,	3870,	15.0,	ford f108
+15,	8,	318.0,	150.0,	4077,	14.0,	plymouth satellite custom (sw)
+15,	8,	455.0,	225.0,	4425,	10.0,	pontiac catalina
+15,	8,	400.0,	190.0,	4422,	12.5,	chrysler newport royal
+15,	8,	400.0,	175.0,	4385,	12.0,	pontiac catalina
+30,	4,	120.0,	75.00,	2542,	17.5,	mazda 626
+30,	4,	144.0,	96.00,	2665,	13.9,	toyota celica gt
+30,	4,	112.0,	85.00,	2575,	16.2,	pontiac j2000 se hatchback
+30,	4,	76.00,	52.00,	1649,	16.5,	toyota corona
+30,	4,	97.00,	75.00,	2171,	16.0,	toyota corolla
+30,	4,	98.00,	68.00,	2155,	16.5,	chevrolet chevette
+45,	4,	86.00,	65.00,	2110,	17.9,	mazda glc
+20,	6,	225.0,	110.0,	3620,	18.7,	dodge aspen
+20,	4,	130.0,	102.0,	3150,	15.7,	volvo 245
+20,	6,	258.0,	120.0,	3410,	15.1,	amc concord d/l
+20,	6,	232.0,	100.0,	2945,	16.0,	amc hornet
+20,	4,	122.0,	85.00,	2310,	18.5,	ford pinto
+20,	8,	302.0,	129.0,	3725,	13.4,	ford ltd landau
+20,	6,	200.0,	95.00,	3155,	18.2,	chevrolet malibu
+20,	8,	318.0,	140.0,	3735,	13.2,	dodge diplomat
+20,	6,	225.0,	105.0,	3121,	16.5,	plymouth valiant

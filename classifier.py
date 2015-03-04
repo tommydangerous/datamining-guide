@@ -8,15 +8,16 @@ class Classifier(ContentRecommender):
         self.median_and_deviation = []
         self.normalize_min_max    = []
 
-    def classify(self, vector, strategy=None):
-        if strategy:
-            if strategy == 'standardize':
-                self.standardize_columns()
-                vector = self.standardize_vector(vector)
-            elif strategy == 'normalize':
-                self.normalize_columns()
-                vector = self.normalize_vector(vector)
-        return self.nearest_neighbor(vector)[1][0]
+    def classify(self, vector, strategy='normalize'):
+        return self.nearest_neighbor(self.standardize(vector, strategy))[1][0]
+
+    def standardize(self, vector, strategy):
+        if strategy == 'standardize':
+            self.standardize_columns()
+            return self.standardize_vector(vector)
+        elif strategy == 'normalize':
+            self.normalize_columns()
+            return self.normalize_vector(vector)
 
     def euclidean(self, vector1, vector2):
         array = map(lambda v1, v2: pow(v1 - v2, 2), vector1, vector2)
@@ -61,8 +62,10 @@ class Classifier(ContentRecommender):
         #     array.append((distance, v))
         # return sorted(array)
 
-        array = [(self.manhattan(vector, v[1]), v) for v in self.data]
-        return min(array)
+        return min(self.nearest_neighbors(vector))
+
+    def nearest_neighbors(self, vector):
+        return sorted([(self.euclidean(vector, v[1]), v) for v in self.data])
 
     def normalize_column(self, col_number):
         values = [v[1][col_number] for v in self.data]
