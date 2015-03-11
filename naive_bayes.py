@@ -264,5 +264,5 @@ def mpg():
 
 # ihealth()
 # house_votes()
-pima()
+# pima()
 # mpg()
